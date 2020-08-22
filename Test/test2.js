@@ -1,18 +1,20 @@
-var a = 1;
-var b = -5;
-var c = 4;
+function nghiem(a,c,b){
+var a = document.getElementById('a').value;
+var b = document.getElementById('b').value;
+var c = document.getElementById('c').value;
 var delta = b^2 - 4*a*c;
 if((a == 0 && b == 0) || (delta < 0)){
-    console.log("Phương trình vô nghiệm.");
+    document.getElementById('ketqua').innerHTML = "Phương trình vô nghiệm";
 }
 else{
     if(a == 0){
-        console.log("Phương trình có một nghiệm là: " + -c/b);
+        document.getElementById('ketqua').innerHTML = "Phương trình có một nghiệm là: " + -c/b;
     }
     else{
-        console.log("Phương trình có hai nghiệm:");
-        console.log(" Nghiệm thứ nhất là: " + (-b + Math.sqrt(delta)) / 2*a);
-        console.log(" Nghiệm thứ hai là: " + (-b - Math.sqrt(delta)) / 2*a);
+        document.getElementById('ketqua').innerHTML =
+         "Phương trình có hai nghiệm:" 
+         + "Nghiệm thứ nhất là: " + (-b + Math.sqrt(delta)) / 2*a 
+         + " Nghiệm thứ hai là: " + (-b - Math.sqrt(delta)) / 2*a;
     }
 }
-
+}
