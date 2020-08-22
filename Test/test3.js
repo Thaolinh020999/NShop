@@ -1,4 +1,5 @@
-var n = 10;
+function songuyento(n){
+var n = document.getElementById('n').value;
 var SNT = true;
 if(n<1){
     SNT = false;
@@ -17,12 +18,12 @@ else{
     }
 }
 if(SNT == true){
-    console.log("So " + n + " la so nguyen to!");
+    document.getElementById('check').innerHTML = "Số " + n + " là số nguyên tố";
 }
 else{
-    console.log("So " + n + " khong phai la so nguyen to!");
+    document.getElementById('check').innerHTML = "Số " + n + " không phải là số nguyên tố";
 }
-
+}
 
 
 
