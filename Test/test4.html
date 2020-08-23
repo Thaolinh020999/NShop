@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính tổng các số chẵn từ 0 đến n</h1>
+        <h1>Nhập n:</h1>
+        <input type = "number" id = "n"></input>
+        <button onclick = "sum()">Check</button>
+        <h1 id="ketqua"></h1>
+    <script>
+        // <h1>Tính tổng các số từ 0 đến n</h1>;
+        // <h1>Nhập n:</h1>;
+        // <input type = "number" id = "n"></input>;
+        // <button onclick = "sum()"></button>;
+        function sum(n){
+            var n = document.getElementById('n').value;
+            var s = 0;
+            var i = 0
+            while(i<=n){
+                if(i%2 == 0){
+                    s+=i;
+                }
+                i++;
+            }
+           document.getElementById('ketqua').innerHTML = "Tổng của các số chẵn từ 0 đến " + n + " là: " + s;
+        }
+    </script>
+</body>
+</html>
