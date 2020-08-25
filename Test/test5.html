@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Project 1</h1>
+    <form>
+        Semester 1
+        <input type="number", id="s1">
+    </form>
+</br>
+    <form>
+        Semester 2
+        <input type="number", id="s2">
+    </form>
+</br>
+    <form>
+        Year
+        <select>
+            <option disabled="disabled">2018-2019</option>
+            <option>2019-2020</option>
+            <option>2020-2021</option>
+        </select>
+    </form>
+</br>
+    <form>
+        <button onclick="sum()">OK</button>
+        <button type="submit" >Cancel</button>
+    </form>
+</br>
+    <h1 id="summ"></h1>
+</br>
+    <h1 id="ketqua"></h1>
+<script>
+    function sum(){
+        var s1 = document.getElementById('s1').value;
+        var s2 = document.getElementById('s2').value;
+        var s = Math.ceil((s1+s2)/2);
+        document.getElementById('summ').innerHTML = "Summaries: " + s;
+        if(s>=9){
+            document.getElementById('ketqua').innerHTML = "Học sinh giỏi!";
+        }
+        else if(6<=s<9){
+            document.getElementById('ketqua').innerHTML = "Học sinh khá!";
+        }
+        else if(4<=s<6){
+            document.getElementById('ketqua').innerHTML = "Học sinh trung bình!";
+        }
+        else{
+            document.getElementById('ketqua').innerHTML = "Học sinh yếu!"
+        }
+    }
+</script>
+</body>
+</html>

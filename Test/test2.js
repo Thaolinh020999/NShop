@@ -12,8 +12,8 @@ else{
     }
     else{
         document.getElementById('ketqua').innerHTML =
-         "Phương trình có hai nghiệm:" 
-         + "Nghiệm thứ nhất là: " + (-b + Math.sqrt(delta)) / 2*a 
+         "Phương trình có hai nghiệm: </br>" 
+         + "Nghiệm thứ nhất là: " + (-b + Math.sqrt(delta)) / 2*a +"</br>" 
          + " Nghiệm thứ hai là: " + (-b - Math.sqrt(delta)) / 2*a;
     }
 }
