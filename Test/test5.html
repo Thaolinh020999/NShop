@@ -7,29 +7,22 @@
 </head>
 <body>
     <h1>Project 1</h1>
-    <form>
         Semester 1
         <input type="number", id="s1">
-    </form>
 </br>
-    <form>
         Semester 2
         <input type="number", id="s2">
-    </form>
 </br>
-    <form>
         Year
-        <select>
-            <option disabled="disabled">2018-2019</option>
-            <option>2019-2020</option>
-            <option>2020-2021</option>
+        <select id="year">
+            <option disabled="disabled">Năm 1</option>
+            <option>Năm 2</option>
+            <option>Năm 3</option>
+            <option>Năm 4</option>
         </select>
-    </form>
 </br>
-    <form>
         <button onclick="sum()">OK</button>
         <button type="submit" >Cancel</button>
-    </form>
 </br>
     <h1 id="summ"></h1>
 </br>
@@ -39,18 +32,19 @@
         var s1 = document.getElementById('s1').value;
         var s2 = document.getElementById('s2').value;
         var s = Math.ceil((s1+s2)/2);
+        var year = document.getElementById('year').value + ":";
         document.getElementById('summ').innerHTML = "Summaries: " + s;
         if(s>=9){
-            return document.getElementById('ketqua').innerHTML = "Học sinh giỏi!";
+            return document.getElementById('ketqua').innerHTML = year + "Học sinh giỏi!";
         }
         else if(6<=s<9){
-            return document.getElementById('ketqua').innerHTML = "Học sinh khá!";
+            return document.getElementById('ketqua').innerHTML = year + "Học sinh khá!";
         }
         else if(4<=s<6){
-            return document.getElementById('ketqua').innerHTML = "Học sinh trung bình!";
+            return document.getElementById('ketqua').innerHTML = year + "Học sinh trung bình!";
         }
         else{
-            return document.getElementById('ketqua').innerHTML = "Học sinh yếu!"
+            return document.getElementById('ketqua').innerHTML = year + "Học sinh yếu!"
         }
     }
 </script>
