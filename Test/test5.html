@@ -41,16 +41,16 @@
         var s = Math.ceil((s1+s2)/2);
         document.getElementById('summ').innerHTML = "Summaries: " + s;
         if(s>=9){
-            document.getElementById('ketqua').innerHTML = "Học sinh giỏi!";
+            return document.getElementById('ketqua').innerHTML = "Học sinh giỏi!";
         }
         else if(6<=s<9){
-            document.getElementById('ketqua').innerHTML = "Học sinh khá!";
+            return document.getElementById('ketqua').innerHTML = "Học sinh khá!";
         }
         else if(4<=s<6){
-            document.getElementById('ketqua').innerHTML = "Học sinh trung bình!";
+            return document.getElementById('ketqua').innerHTML = "Học sinh trung bình!";
         }
         else{
-            document.getElementById('ketqua').innerHTML = "Học sinh yếu!"
+            return document.getElementById('ketqua').innerHTML = "Học sinh yếu!"
         }
     }
 </script>
