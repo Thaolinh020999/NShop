@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Xóa đi n phần tử cuối cùng trong mảng</h1>
+    <h1>Cho mảng: [0,1,2,3,4,5,6,7,8,9]</h1>
+    <h1>Mời bạn nhập n phần tử muốn xóa:</h1>
+    <h1>Note: số phần tử phải nhỏ hơn hoặc bằng 10</h1>
+    <input type=number id="n">
+    <button onclick="removeEnd()">Start</button>
+    <h1 id="ketqua"></h1>
+    <script>
+        function removeEnd(arr,n){
+            var arr = [0,1,2,3,4,5,6,7,8,9]; 
+            var n=document.getElementById('n').value;
+            arr.splice(arr.length-n,n);
+            return document.getElementById('ketqua').innerHTML="Kết quả: [" + arr + "]";
+        }
+    </script>
+</body>
+</html>

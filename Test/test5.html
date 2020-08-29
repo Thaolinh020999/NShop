@@ -6,23 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Project 1</h1>
+    <h1>Project 1</h1> 
+    <form action="">
         Semester 1
-        <input type="number", id="s1">
-</br>
+        <input type="number" id="s1"></br>
         Semester 2
-        <input type="number", id="s2">
-</br>
+        <input type="number" id="s2"></br>
         Year
         <select id="year">
             <option disabled="disabled">Năm 1</option>
             <option>Năm 2</option>
             <option>Năm 3</option>
             <option>Năm 4</option>
-        </select>
-</br>
-        <button onclick="sum()">OK</button>
-        <button type="submit" >Cancel</button>
+        </select></br>
+        <button type="button" onclick="sum()">OK</button>
+        <button type="button">Cancel</button>
+    </form> 
 </br>
     <h1 id="summ"></h1>
 </br>
@@ -31,20 +30,19 @@
     function sum(){
         var s1 = document.getElementById('s1').value;
         var s2 = document.getElementById('s2').value;
-        var s = Math.ceil((s1+s2)/2);
         var year = document.getElementById('year').value + ":";
+        var s = ((parseInt(s1)+parseInt(s2))/2);
+
         document.getElementById('summ').innerHTML = "Summaries: " + s;
+        console.log(s);
         if(s>=9){
-            return document.getElementById('ketqua').innerHTML = year + "Học sinh giỏi!";
-        }
-        else if(6<=s<9){
-            return document.getElementById('ketqua').innerHTML = year + "Học sinh khá!";
-        }
-        else if(4<=s<6){
-            return document.getElementById('ketqua').innerHTML = year + "Học sinh trung bình!";
-        }
-        else{
-            return document.getElementById('ketqua').innerHTML = year + "Học sinh yếu!"
+            document.getElementById('ketqua').innerHTML = year + "Học sinh giỏi!";
+        }else if(9 > s >= 6 ){
+            document.getElementById('ketqua').innerHTML = year + "Học sinh khá!";
+        }else if(6 > s >= 4){
+            document.getElementById('ketqua').innerHTML = year + "Học sinh trung bình!";
+        }else{
+            document.getElementById('ketqua').innerHTML = year + "Học sinh yếu!"
         }
     }
 </script>
