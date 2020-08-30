@@ -14,7 +14,7 @@ var sum=0;
 // console.log(arr1);
 
 
-//include
+//reduce
 sum = arr.reduce((sum,value,index,arr) => {
     return sum+=value;
 })
